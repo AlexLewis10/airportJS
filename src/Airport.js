@@ -1,3 +1,5 @@
+const MAX_PLANES = 3
+
 function Airport() {
     this.hangar = []
 }
@@ -11,7 +13,7 @@ Airport.prototype.takeOff = function() {
 }
 
 Airport.prototype.isHangarFull = function() {
-    if (this.hangar.length >= 3) {
+    if (this.hangar.length >= MAX_PLANES) {
         return true
     }
     return false
