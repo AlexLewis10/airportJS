@@ -3,6 +3,7 @@ const MAX_PLANES = 3
 
 function Airport() {
     this.hangar = []
+    this.capacity = 3
 }
 
 Airport.prototype.landPlane = function(plane) {
@@ -32,5 +33,9 @@ Airport.prototype.isHangarEmpty = function() {
         return false
     }
     return true
+}
+
+Airport.prototype.setCapacity = function(number) {
+    this.capacity = number
 }
 

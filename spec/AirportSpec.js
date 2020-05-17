@@ -52,4 +52,15 @@ describe('Airport', function() {
             expect(heathrow.takeOff()).toEqual('plane has taken off')
         })
     })
+
+    describe('can change airport capacity', function() {
+        it('airport has a capacity', function() {
+            expect(heathrow.capacity).toEqual(3)
+        })
+
+        it('can increase airport capacity', function() {
+            heathrow.setCapacity(5)
+            expect(heathrow.capacity).toEqual(5)
+        })
+    })
 })
