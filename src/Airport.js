@@ -10,3 +10,7 @@ Airport.prototype.takeOff = function() {
     return 'plane has taken off'
 }
 
+Airport.prototype.isHangarFull = function() {
+    return true
+}
+
