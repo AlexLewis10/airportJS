@@ -2,8 +2,8 @@ function Airport() {
     this.hangar = []
 }
 
-Airport.prototype.landPlane = function() {
-    return 'Plane has landed'
+Airport.prototype.landPlane = function(plane) {
+    this.hangar.push(plane)
 }
 
 Airport.prototype.takeOff = function() {

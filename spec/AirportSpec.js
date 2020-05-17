@@ -12,9 +12,12 @@ describe('Airport', function() {
     })
 
     describe('Plane can land at the airport', function() {
-        it('plane lands', function() {
-            expect(heathrow.landPlane()).toEqual('Plane has landed')
+        it('Plane is added to the hangar', function() {
+            heathrow.landPlane("plane")
+            expect(heathrow.hangar).toEqual(["plane"])
         })
+
+
     })
 
     describe('Plane can take off from the airport', function() {
