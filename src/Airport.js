@@ -13,7 +13,7 @@ Airport.prototype.landPlane = function(plane) {
 }
 
 Airport.prototype.takeOff = function() {
-    if (this.hangar.length === 0) {
+    if (this.isHangarEmpty() === true) {
         return "Hangar empty, no planes available"
     }
     this.hangar.pop()
@@ -25,5 +25,12 @@ Airport.prototype.isHangarFull = function() {
         return true
     }
     return false
+}
+
+Airport.prototype.isHangarEmpty = function() {
+    if (this.hangar.length > 0) {
+        return false
+    }
+    return true
 }
 
