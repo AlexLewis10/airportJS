@@ -41,8 +41,14 @@ describe('Airport', function() {
             heathrow.takeOff()
             expect(heathrow.hangar).toEqual(["plane1", "plane2"])
         })
+
         
+        it('Plane cannot take off if hangar is empty', function() {
+            expect(heathrow.takeOff()).toEqual("Hangar empty, no planes available")
+        })
+
         it('states that the plane has taken off', function() {
+            heathrow.hangar = ["plane1"]
             expect(heathrow.takeOff()).toEqual('plane has taken off')
         })
     })
