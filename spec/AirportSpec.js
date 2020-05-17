@@ -36,7 +36,13 @@ describe('Airport', function() {
 
 
     describe('Plane can take off from the airport', function() {
-        it('returns a plane', function() {
+        it('removes the plane from the Hangar', function() {
+            heathrow.hangar = ["plane1", "plane2", "plane3"]
+            heathrow.takeOff()
+            expect(heathrow.hangar).toEqual(["plane1", "plane2"])
+        })
+        
+        it('states that the plane has taken off', function() {
             expect(heathrow.takeOff()).toEqual('plane has taken off')
         })
     })

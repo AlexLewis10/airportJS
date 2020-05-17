@@ -13,6 +13,7 @@ Airport.prototype.landPlane = function(plane) {
 }
 
 Airport.prototype.takeOff = function() {
+    this.hangar.pop()
     return 'plane has taken off'
 }
 
