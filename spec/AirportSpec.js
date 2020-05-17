@@ -17,16 +17,20 @@ describe('Airport', function() {
             expect(heathrow.hangar).toEqual(["plane"])
         })
 
-        it('Can land if the hangar is full', function() {
+        it('Cannot land if the hangar is full', function() {
+            heathrow.hangar = ["plane1", "plane2", "plane3"]
+            expect(heathrow.landPlane("plane")).toEqual("Cannot land. Hangar full")
+        })
+
+        it('Can see if the hangar is has space', function() {
             heathrow.hangar = ["plane1", "plane2"]
             expect(heathrow.isHangarFull()).toEqual(false) 
         })
 
-        it('Cannot land if the hangar is full', function() {
+        it('Can see if the hangar does not have space', function() {
             heathrow.hangar = ["plane1", "plane2", "plane3"]
             expect(heathrow.isHangarFull()).toEqual(true) 
         })
-
     })
 
 

@@ -1,3 +1,4 @@
+// will need to have method to change number of planes
 const MAX_PLANES = 3
 
 function Airport() {
@@ -5,6 +6,9 @@ function Airport() {
 }
 
 Airport.prototype.landPlane = function(plane) {
+    if (this.isHangarFull() === true) {
+        return "Cannot land. Hangar full"
+    }
     this.hangar.push(plane)
 }
 
