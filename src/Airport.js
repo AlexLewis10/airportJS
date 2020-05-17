@@ -11,6 +11,9 @@ Airport.prototype.takeOff = function() {
 }
 
 Airport.prototype.isHangarFull = function() {
-    return true
+    if (this.hangar.length >= 3) {
+        return true
+    }
+    return false
 }
 
