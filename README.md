@@ -1,4 +1,10 @@
-An app to help control the flow of planes at an airport.
+## Airport Challenge
+
+In Makers academy you start by learning Ruby and then in week5 you switch to JavaScript. I revisited the first weekend challenge after a few weeks work in JavaScript to help me evaluate how far I had come. 
+
+Completed user stories are marked with DONE.
+
+It is a simple app to control the flow of planes at an airport.
 
 ## User Stories
 
